@@ -19,6 +19,12 @@ function criarTarefa() {
         itemLista.innerText = imput.value
         imput.value = '';
         lista.appendChild(itemLista);
+
+        //para apagar linhas
+        let botaoApaga = document.querySelector('#apaga-tudo');
+        botaoApaga.addEventListener('click', function() {
+            itemLista.remove();
+        })
     }) // tive explicação na mentoria!!!!
 }
 criarTarefa();
