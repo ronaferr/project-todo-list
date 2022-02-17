@@ -25,6 +25,13 @@ function criarTarefa() {
         botaoApaga.addEventListener('click', function() {
             itemLista.remove();
         })
+
+        let botaoConcluidas = document.querySelector('#remover-finalizados');
+        botaoConcluidas.addEventListener('click', function() {
+            if (itemLista.className === 'completed') {
+                itemLista.remove();
+            }
+        })
     }) // tive explicação na mentoria!!!!
 }
 criarTarefa();
