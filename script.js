@@ -10,12 +10,12 @@ function criarTarefa() {
 
         //pra deixar lista cinza
         itemLista.addEventListener('click', function () {
-            let selecionado = document.querySelector('.selected');
+            let selecionado = document.querySelector('#selected');
             if (selecionado !== null) {
-                selecionado.className = '';
+                selecionado.id = '';
                 selecionado.style.backgroundColor = 'white';
             }
-            itemLista.className = 'selected';
+            itemLista.id = 'selected';
             itemLista.style.backgroundColor = 'rgb(128, 128, 128)';
 
         })
@@ -30,7 +30,6 @@ function criarTarefa() {
         })
 
         lista.appendChild(itemLista);
-        
         //para apagar linhas
         let botaoApaga = document.querySelector('#apaga-tudo');
         botaoApaga.addEventListener('click', function () {
